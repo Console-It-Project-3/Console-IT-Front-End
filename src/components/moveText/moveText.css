@@ -8,9 +8,9 @@ p{
 }
 .all{
     display: flex;
-    background: url("../photos/bookSmall.jpg");
+    background: url("../../photos/bookSmall.jpg");
     background-size: cover;
-    height: 355px;
+    height: 375px;
 }
 .text{
 }
