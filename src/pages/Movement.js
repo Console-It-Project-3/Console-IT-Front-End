@@ -1,9 +1,14 @@
-import React, {Component} from "react";
-
-class Movement extends Component{
-render(){
-    return <h1>Hello, it's me</h1>
-}
+import React, { Component } from "react";
+import Movement from "../components/movement"
+import MoveText from "../components/moveText"
+class Movement extends Component {
+    render() {
+        return
+        <>
+            <Movement />
+            <MoveText />
+        </>
+    }
 }
 
 export default Movement
