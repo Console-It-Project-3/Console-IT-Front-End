@@ -98,8 +98,6 @@ class Home extends Component {
                     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                     <a id="playNow" className="btn btn-primary btn-lg justify-content-end" href="#" role="button">Learn more</a>
                 </div>
-
-
             </div>
         );
     }
