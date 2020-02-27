@@ -1,17 +1,12 @@
 import React, { Component, useState } from "react";
-import BattleText from "../components/battleText"
-import Moving from "../components/movement"
-import Inventory from "../components/inventory"
+import BattleText from "../components/battleText";
+import Moving from "../components/movement";
+import Inventory from "../components/inventory";
+import ReturnToStory from "../components/ReturnToStory";
+import BattleStats from "../components/BattleStats";
 
 
 
-
-
-
-function handleButtonInventory() {
-    console.log("clicked");
-
-}
 function handleButton3() {
     console.log("clicked");
 
@@ -32,8 +27,22 @@ class Battle extends Component {
         battleDialogue: "You encountered a rogue knight! What would you like to do? ",
         currentlyInBattle: true,
         faded: true,
+        inventory: [
+            "potion", "golden apple", "steak", "other things"
+        ],
+        invenShow: false,
+        endShow: false
+
+
     }
 
+    handleButtonInventory = () => {
+        console.log("clicked");
+        this.setState({
+            invenShow: !this.state.invenShow
+        })
+
+    }
 
     handleButtonFight = () => {
         console.log("clicked");
@@ -67,8 +76,10 @@ class Battle extends Component {
 
     endBattle = () => {
         this.setState({
-            battleDialogue: "You have defeated the enemy!",
-            currentlyInBattle: false
+            battleDialogue: "You have defeated the enemy! You found __gold and gained __experience",
+            currentlyInBattle: false,
+            endShow: true
+
         })
 
     }
@@ -79,26 +90,13 @@ class Battle extends Component {
 
 
 
-
-        // if (this.state.enemyHP <= 0 && this.state.currentlyInBattle === true) {
-        //     console.log('defeated enimes!!!')
-
-        //     this.endBattle()
-        // }
-
-        // else {
-        //     console.log('taking 10 damadge!!')
-        //     this.setState({
-        //         battleDialogue: " Enemy attacked taking 10 damage",
-        //         heroHP: this.state.heroHP - this.state.enemyAttack
-        //     })
-        // }
-
         return (
             <>
                 <Moving />
+                <BattleStats enemyHP={this.state.enemyHP} heroHP={this.state.heroHP} />
                 <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButton3={this.handleButton3} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
-                <Inventory />
+                <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
+                <ReturnToStory endShow={this.state.endShow} />
             </>
         )
     }

@@ -3,7 +3,7 @@ import "./SignUp.css"
 class Signup extends Component {
     render() {
         return (
-            <div>
+            <div className="signUp">
 
                 <div className="container">
                     <form class="needs-validation" novalidate>

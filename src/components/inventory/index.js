@@ -1,31 +1,23 @@
-import React from 'react';
+import React from 'react'
+import "./inventory.css"
 
-import './inventory.css';
 
-const modal = (props) => {
+
+function inventory({ inventory, invenShow, handleButtonInventory }) {
+
+    const invenClass = invenShow ? 'invenBox' : 'hide invenBox'
+
+
+
     return (
-        <div>
-            <div className="modal-wrapper"
-                style={{
-                    transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
-                    opacity: props.show ? '1' : '0'
-                }}>
-                <div className="modal-header">
-                    <h3>Modal Header</h3>
-                    <span className="close-modal-btn" onClick={props.close}>×</span>
-                </div>
-                <div className="modal-body">
-                    <p>
-                        {props.children}
-                    </p>
-                </div>
-                <div className="modal-footer">
-                    <button className="btn-cancel" onClick={props.close}>CLOSE</button>
-                    <button className="btn-continue">CONTINUE</button>
-                </div>
-            </div>
+        <div className={invenClass}>
+            <p className="invenHead">Inventory</p>
+            <ul className="items">
+                {inventory.map(item => (<li><button className="itemBtn">use</button> {item} </li>))}
+            </ul>
+            <button onClick={handleButtonInventory} className="closeBtn">Close</button>
         </div>
     )
 }
 
-export default modal;
+export default inventory
