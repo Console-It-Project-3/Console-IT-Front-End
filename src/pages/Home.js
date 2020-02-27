@@ -18,7 +18,7 @@ class Home extends Component {
                 {/* <li class="nav-item"><a href="#" class="nav-link">More</a></li> */}
             </ul>
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-                <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                <li class="nav-item order-2 order-md-1"><a href="/signup" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
                 <li class="dropdown order-1">
                     <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Sign Up <span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right mt-2">
