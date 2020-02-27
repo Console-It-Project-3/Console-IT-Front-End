@@ -1,5 +1,6 @@
 import React from 'react'
 import './moveText.css'
+// import StoryText from "./text";
 
 function text() {
     return (
