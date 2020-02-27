@@ -5,7 +5,7 @@ class Signup extends Component {
         return (
             <div className="signUp">
 
-                <div className="container">
+                <div className="container-signup">
                     <form class="needs-validation" novalidate>
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
