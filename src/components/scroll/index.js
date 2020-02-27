@@ -3,9 +3,11 @@ import "./scroll.css"
 
 function scroll() {
     return (
+
         <div className="scroll">
-            <p className="scrollText">     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut magnam et nesciunt quasi esse accusamus fugiat ea. Provident cumque delectus id laborum amet reiciendis, commodi illo ratione quae aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit facilis a sapiente reprehenderit, officiis commodi doloribus laboriosam quaerat, provident earum harum.</p>
+            <p className="scrollText"> This is some information about the fighter class. Fighters like to fight. </p>
         </div>
+
     )
 }
 

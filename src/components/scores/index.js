@@ -14,6 +14,7 @@ function scores() {
                         <p>10,000</p>
                     </div>
                 </div>
+                <a className="btn btn-secondary btn-lg btn-block homeBtn" href="/home" role="button">Home</a>
             </div>
         </div>
     )
