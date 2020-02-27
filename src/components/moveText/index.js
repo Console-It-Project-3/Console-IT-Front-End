@@ -6,7 +6,7 @@ function text() {
 
         <div className="all">
             <div className="text">
-                <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut magnam et nesciunt quasi esse accusamus fugiat ea. Provident cumque delectus id laborum amet reiciendis, commodi illo ratione quae aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit facilis a sapiente reprehenderit, officiis commodi doloribus laboriosam quaerat, provident earum harum in ratione excepturi rem recusandae at dolorum autem. </p>
+                <p className="pText">    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut magnam et nesciunt quasi esse accusamus fugiat ea. Provident cumque delectus id laborum amet reiciendis, commodi illo ratione quae aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit facilis a sapiente reprehenderit, officiis commodi doloribus laboriosam quaerat, provident earum harum in ratione excepturi rem recusandae at dolorum autem. </p>
             </div>
             <div className="buttons">
                 <button className="button1">Inventory</button>
