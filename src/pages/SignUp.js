@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./SignUp.css"
 
 
-
 class Signup extends Component {
     render() {
         return (
@@ -20,6 +19,7 @@ class Signup extends Component {
                             <div className="col-md-4 mb-3">
                                 <label for="validationCustom02">Last name: </label>
                                 <input type="text" className="form-control" placeholder="Enter your last name" required />
+
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
@@ -27,7 +27,6 @@ class Signup extends Component {
                             <div className="col-md-4 mb-3">
                                 <label for="validationCustomUsername">Username: </label>
                                 <div className="input-group">
-                                    
                                     <input type="text" className="form-control" aria-describedby="inputGroupPrepend" required />
                                     <div className="invalid-feedback">
                                         Please choose a username.
