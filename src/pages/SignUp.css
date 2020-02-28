@@ -1,17 +1,26 @@
 
 .container-signup {
 
-    max-width: 400px;
+    max-width: 475px;
+    margin:auto;
 }
 .needs-validation{
-    margin-top: 250px;
+    margin: auto;
     border: 2px solid black;
     border-radius: 20px;
     padding: 15px;
+    background: aliceblue;
+    
+}
+.signup-box{
+    margin:auto;
+    margin-top:15%;
 }
 
 
+
 .signUp{
+
 
     background: url(https://i.imgur.com/57TTWUF.png);
 }
