@@ -1,4 +1,6 @@
+
 .container-signup {
+
     max-width: 400px;
 }
 .needs-validation{
@@ -8,6 +10,8 @@
     padding: 15px;
 }
 
-body{
+
+.signUp{
+
     background: url(https://i.imgur.com/57TTWUF.png);
 }

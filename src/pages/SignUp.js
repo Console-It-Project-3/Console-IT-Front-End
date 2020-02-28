@@ -3,9 +3,15 @@ import "./SignUp.css"
 class Signup extends Component {
     render() {
         return (
-            <div>
+
+            <div className="signUp">
+
+          
+
+           
 
                 <div className="container-signup">
+
                     <form class="needs-validation" novalidate>
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
