@@ -1,6 +1,5 @@
 
 .container-signup {
-
     max-width: 475px;
     margin:auto;
 }
@@ -14,13 +13,8 @@
 }
 .signup-box{
     margin:auto;
-    margin-top:15%;
-}
-
-
-
-.signUp{
-
-
+    padding-top:15%;
+    padding-bottom: 146px;
     background: url(https://i.imgur.com/57TTWUF.png);
+
 }
