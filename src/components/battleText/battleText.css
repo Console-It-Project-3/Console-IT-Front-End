@@ -28,7 +28,7 @@
 .buttons{
     position: relative;
     /* position: absolute; */
-    left: 550px;
+    /* right: 100px; */
     bottom: 40px;
 
 }
@@ -45,18 +45,18 @@
     position: absolute;
 }
 .button1{
-    left: -500px;
+    right: 500px;
     bottom: 200px;
 }
 .button2{
-    left: -300px;
+    right: 300px;
     bottom: 200px;
 }
 .button3{
-    left: -500px;
+    right: 500px;
     bottom: 100px;
 }
 .button4{
-    left: -300px;
+    right: 300px;
     bottom: 100px;
 }

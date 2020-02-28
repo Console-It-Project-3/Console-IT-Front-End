@@ -1,9 +1,10 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import BattleText from "../components/battleText";
 import Moving from "../components/movement";
 import Inventory from "../components/inventory";
 import ReturnToStory from "../components/ReturnToStory";
 import BattleStats from "../components/BattleStats";
+import Run from "../components/Run"
 
 
 
@@ -11,10 +12,9 @@ function handleButton3() {
     console.log("clicked");
 
 }
-function handleButtonRun() {
-    console.log("clicked");
 
-}
+
+
 
 
 class Battle extends Component {
@@ -22,8 +22,10 @@ class Battle extends Component {
     state = {
         heroHP: 100,
         heroAttack: 20,
+        heroMaxHP: 100,
         enemyHP: 50,
         enemyAttack: 10,
+        enemyMaxHP: 50,
         battleDialogue: "You encountered a rogue knight! What would you like to do? ",
         currentlyInBattle: true,
         faded: true,
@@ -31,8 +33,12 @@ class Battle extends Component {
             "potion", "golden apple", "steak", "other things"
         ],
         invenShow: false,
-        endShow: false
-
+        endShow: false,
+        runShow: false,
+        random: Math.floor((Math.random() * 4) + 1),
+        runDia: "",
+        runSuccess: false,
+        runClass: "",
 
     }
 
@@ -48,7 +54,6 @@ class Battle extends Component {
         console.log("clicked");
 
         this.setState({
-            // battleDialogue: `You attacked! You dealt ${this.state.heroAttack} damage \n Enemey deal you ${this.state.enemyAttack}`,
             enemyHP: this.state.enemyHP - this.state.heroAttack,
             faded: false
         }, function () {
@@ -83,8 +88,42 @@ class Battle extends Component {
         })
 
     }
+    handleButtonRun = () => {
+        console.log(this.state.random);
 
+        if (this.state.random === 1) {
+            this.setState({
+                runDia: `You could not get away and took ${this.state.enemyAttack} damage!`,
+                heroHP: this.state.heroHP - this.state.enemyAttack,
+                runSuccess: false
+            })
 
+        } else {
+            this.setState({
+                runDia: "You have successfully run away",
+                runSuccess: true
+            })
+
+        }
+
+        this.setState({
+            runShow: true
+        })
+    }
+
+    handleRunContinue = () => {
+        if (this.state.runSuccess === true) {
+            window.location.href = "movement"
+        } else {
+            this.setState({
+                runShow: false
+            })
+        }
+    }
+
+    handleReturnStory = () => {
+        window.location.href = "movement"
+    }
 
     render() {
 
@@ -93,10 +132,11 @@ class Battle extends Component {
         return (
             <>
                 <Moving />
-                <BattleStats enemyHP={this.state.enemyHP} heroHP={this.state.heroHP} />
+                <BattleStats enemyHP={this.state.enemyHP} heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemyMaxHP={this.state.enemyMaxHP} />
                 <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButton3={this.handleButton3} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
                 <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
-                <ReturnToStory endShow={this.state.endShow} />
+                <ReturnToStory handleReturnStory={this.handleReturnStory} endShow={this.state.endShow} />
+                <Run handleRunContinue={this.handleRunContinue} runShow={this.state.runShow} runDia={this.state.runDia} runClass={this.state.runClass} />
             </>
         )
     }

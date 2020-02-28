@@ -2,13 +2,13 @@ import React from 'react'
 import "./returnToStory.css"
 
 
-function ReturnToStory({ endShow }) {
+function ReturnToStory({ endShow, handleReturnStory }) {
 
     const returnStory = endShow ? "returnStory" : "returnStory hide"
 
     return (
         <div>
-            <button href="/movement" className={returnStory}>Continue</button>
+            <button onClick={handleReturnStory} className={returnStory}>Continue</button>
         </div >
     )
 }
