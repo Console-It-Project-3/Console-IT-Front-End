@@ -1,5 +1,6 @@
 
 .container-signup {
+
     max-width: 475px;
     margin:auto;
 }
@@ -15,6 +16,11 @@
     margin:auto;
     margin-top:15%;
 }
-body{
+
+
+
+.signUp{
+
+
     background: url(https://i.imgur.com/57TTWUF.png);
 }

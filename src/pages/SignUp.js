@@ -6,12 +6,14 @@ import "./SignUp.css"
 class Signup extends Component {
     render() {
         return (
+
             <div className="signup-box">
 
                 <div className="container-signup">
                     <form className="needs-validation" novalidate>
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
+          
                                 <label for="validationCustom01">First name</label>
                                 <input type="text" className="form-control" value="Mark" required />
                                 <div className="valid-feedback">

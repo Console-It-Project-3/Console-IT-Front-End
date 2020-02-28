@@ -1,0 +1,48 @@
+.heroBar, .enemyBar{
+    display: block;
+    -webkit-appearance: none;
+   appearance: none;
+    /* background: red; */
+    width: 250px;
+    border-radius: 30px;
+    /* border: 1px solid black; */
+    padding-bottom: 10px;
+}
+.heroBar[value]::-webkit-progress-bar{
+    border-radius: 30px;
+}
+.heroBar[value]::-webkit-progress-value{
+    background: red;
+    border-radius: 30px;
+}
+.heroBox{
+    position: absolute;
+    bottom: 380px;
+    right: 40px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    text-align: right;
+}
+.heroBox, .enemyBox{
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+.enemyBar[value]::-webkit-progress-bar{
+    border-radius: 30px;
+}
+.enemyBar[value]::-webkit-progress-value{
+    background: red;
+    border-radius: 30px;
+}
+
+.enemyBox{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    text-align: left;
+}
